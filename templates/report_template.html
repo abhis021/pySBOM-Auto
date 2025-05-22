@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>SBOM Compliance Report</title></head>
+<body>
+<h1>SBOM Compliance Report - {{ timestamp }}</h1>
+{% for pkg, vulns in cve_data.items() %}
+  <h2>{{ pkg }}</h2>
+  {% if vulns %}
+    <ul>
+    {% for v in vulns %}
+      <li><strong>{{ v['id'] }}</strong>: {{ v.get('title', 'No description') }}</li>
+    {% endfor %}
+    </ul>
+  {% else %}
+    <p>No known vulnerabilities.</p>
+  {% endif %}
+{% endfor %}
+</body>
+</html>

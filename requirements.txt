@@ -1,0 +1,6 @@
+cyclonedx-python-lib
+requests
+jinja2
+pandas
+spdx-tools
+weasyprint
