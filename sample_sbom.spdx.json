@@ -1,0 +1,100 @@
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "creationInfo": {
+    "created": "2025-05-24T10:30:00Z",
+    "creators": [
+      "Tool: SPDX-Tools-Python-v1.0.0",
+      "Organization: MyCompany Inc."
+    ],
+    "licenseListVersion": "3.22"
+  },
+  "dataLicense": "CC0-1.0",
+  "documentNamespace": "https://spdx.org/spdxdocs/spdx-example-mywebapp-1.0-2025-05-24-12345",
+  "name": "MyWebApp 1.0 SBOM",
+  "comment": "This is an example SPDX 2.3 JSON document for MyWebApp version 1.0.",
+  "documentDescribes": [
+    "SPDXRef-MyWebApp"
+  ],
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-MyWebApp",
+      "name": "MyWebApp",
+      "versionInfo": "1.0",
+      "supplier": "Organization: MyCompany Inc.",
+      "originator": "Organization: MyCompany Inc.",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "summary": "A sample web application.",
+      "description": "This is a hypothetical web application built with Python and common libraries."
+    },
+    {
+      "SPDXID": "SPDXRef-Package-Requests",
+      "name": "requests",
+      "versionInfo": "2.28.1",
+      "supplier": "NOASSERTION",
+      "originator": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/project/requests/2.28.1/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "LicenseRef-Apache-2.0",
+      "licenseDeclared": "Apache-2.0",
+      "copyrightText": "Copyright (c) 2017 Kenneth Reitz"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-Jinja2",
+      "name": "Jinja2",
+      "versionInfo": "3.1.2",
+      "supplier": "NOASSERTION",
+      "originator": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/project/Jinja2/3.1.2/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "LicenseRef-BSD-3-Clause",
+      "licenseDeclared": "BSD-3-Clause",
+      "copyrightText": "Copyright (c) 2007-2022 by the Jinja team."
+    },
+    {
+      "SPDXID": "SPDXRef-Package-Pandas",
+      "name": "pandas",
+      "versionInfo": "2.2.0",
+      "supplier": "NOASSERTION",
+      "originator": "NOASSERTION",
+      "downloadLocation": "https://pypi.org/project/pandas/2.2.0/",
+      "filesAnalyzed": false,
+      "licenseConcluded": "LicenseRef-BSD-3-Clause-pandas",
+      "licenseDeclared": "BSD-3-Clause",
+      "copyrightText": "Copyright (c) 2008-2011, AQR Capital Management, LLC, Lambda Foundry, Inc. and PyData Development Team"
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-MyWebApp",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Package-Requests"
+    },
+    {
+      "spdxElementId": "SPDXRef-MyWebApp",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Package-Jinja2"
+    },
+    {
+      "spdxElementId": "SPDXRef-MyWebApp",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Package-Pandas"
+    }
+  ],
+  "licenses": [
+    {
+      "licenseId": "Apache-2.0",
+      "extractedText": "...",
+      "name": "Apache License 2.0"
+    },
+    {
+      "licenseId": "BSD-3-Clause",
+      "extractedText": "...",
+      "name": "BSD 3-Clause \"New\" or \"Revised\" License"
+    }
+  ]
+}

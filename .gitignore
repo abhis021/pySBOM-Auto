@@ -1,4 +1,5 @@
-echo "__pycache__/" >> .gitignore
-echo "*.pyc" >> .gitignore
-echo "reports/" >> .gitignore
-echo "*.pdf" >> .gitignore
+__pycache__/
+*.pyc
+reports/
+*.pdf
+venv
